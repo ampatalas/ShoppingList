@@ -31,11 +31,11 @@
         <!--ContentPanel - place additional content here-->
         <StackPanel x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <TextBlock Style="{StaticResource AddingPageTextBlockStyle}" Text="Item name"/>
-            <TextBox Name="ItemName" HorizontalAlignment="Center" Width="456" />
+            <TextBox Name="ItemName" Text="{Binding Path=Name, Mode=TwoWay}" HorizontalAlignment="Center" Width="456" />
             <TextBlock Style="{StaticResource AddingPageTextBlockStyle}" Text="Item category"/>
-            <toolkit:ListPicker Name="categoriesListPicker" />
+            <toolkit:ListPicker Name="categoriesListPicker" SelectedItem="{Binding Path=Category, Mode=TwoWay}"/>
             <TextBlock Style="{StaticResource AddingPageTextBlockStyle}" Text="Amount"/>
-            <TextBox Name="ItemAmount" HorizontalAlignment="Center" Width="456" InputScope="Number" />
+            <TextBox Name="ItemAmount" Text="{Binding Path=Amount, Mode=TwoWay}" HorizontalAlignment="Center" Width="456" InputScope="Number" />
             <Button Content="Save" Margin="60, 20, 60, 0" Click="AddItemClick"/>
 
         </StackPanel>

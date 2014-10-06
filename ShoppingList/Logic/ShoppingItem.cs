@@ -11,16 +11,28 @@ namespace ShoppingList.Logic
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
+        private Category category;
         private String name;
         private double amount;
 
-        public Category category { get; set; }
-        public double Amount {
+        public Category Category
+        {
+            get { return category; }
+            set
+            {
+                category = value;
+                OnPropertyChanged("Category");
+            }
+        }
+        
+        public double Amount
+        {
             get { return amount; }
             set
             {
                 if (value == 0) throw new InvalidShoppingItemException("The amount of item cannot be 0.");
                 amount = value;
+                OnPropertyChanged("Amount");
             }
         }
 

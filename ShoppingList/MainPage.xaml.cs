@@ -24,11 +24,11 @@ namespace ShoppingList
 
             //new way
             shoppingList = new ObservableCollection<ShoppingItem> {
-                new ShoppingItem {Name = "Milk", category = Category.Diary, Amount = 2},
-                new ShoppingItem {Name = "Eggs", category = Category.Diary, Amount = 7},
-                new ShoppingItem {Name = "Tomatoes", category = Category.Vegetables, Amount = 3},
-                new ShoppingItem {Name = "Chicken breast", category = Category.Meat, Amount = 2},
-                new ShoppingItem {Name = "Apples", category = Category.Fruit, Amount = 5}
+                new ShoppingItem {Name = "Milk", Category = Category.Diary, Amount = 2},
+                new ShoppingItem {Name = "Eggs", Category = Category.Diary, Amount = 7},
+                new ShoppingItem {Name = "Tomatoes", Category = Category.Vegetables, Amount = 3},
+                new ShoppingItem {Name = "Chicken breast", Category = Category.Meat, Amount = 2},
+                new ShoppingItem {Name = "Apples", Category = Category.Fruit, Amount = 5}
             };
 
             shoppingListBinding.DataContext = shoppingList;
@@ -82,7 +82,7 @@ namespace ShoppingList
             nameBlock.Text = item.Name;
 
             TextBlock categoryBlock = new TextBlock();
-            categoryBlock.Text = item.category.ToString();
+            categoryBlock.Text = item.Category.ToString();
             categoryBlock.Margin = margin;
 
             TextBlock amountBlock = new TextBlock();

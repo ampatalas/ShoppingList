@@ -31,7 +31,7 @@ namespace ShoppingList
             {
                 item.Name = ItemName.Text;
                 item.Amount = Double.Parse(ItemAmount.Text);
-                item.category = (Category)categoriesListPicker.SelectedItem;
+                item.Category = (Category)categoriesListPicker.SelectedItem;
                 if (!editMode) MainPage.shoppingList.Add(item);
 
                 if (NavigationService.CanGoBack)
